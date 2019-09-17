@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>building information</title>
+</head>
+<body>
+
+<ol>
+<!-- For loop logic of jinja template -->
+{%for building in buildings%}
+
+    <p>{{building['group_name']}} is {{building['percent_full']}}% full</p>
+
+{%endfor%}
+
+</ol>
+
+</body>
+</html>
