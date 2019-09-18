@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>{{ title }}</title>
+</head>
+<body>
+
+<ol>
+<!-- For loop for rendering info of each building group -->
+{%for building in buildings%}
+
+    <p>{{building['group_name']}} is {{building['percent_full']}}% full</p>
+
+{%endfor%}
+
+</ol>
+
+</body>
+</html>
