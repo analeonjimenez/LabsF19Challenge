@@ -1,10 +1,13 @@
 from flask import Flask, render_template
 import requests
+import os
+from dotenv import load_dotenv
 
 app = Flask(__name__)
+load_dotenv() # loading API key as stored in .env
 
 building_dict = {} # the name-key dictionary for each building
-AUTH = "?auth_token=FQDYGZr3mDQ36ce7Rm405LhVO4xRwXx47EAM0LcHLZf2-zO7Gf9BoohK2w0o7cM6" # API key
+AUTH = "?auth_token=" + os.getenv("API_KEY") # API key
 URL_LATEST = "http://density.adicu.com/latest" # API for accessing latest data of all buildings
 URL_BUILDING = "http://density.adicu.com/latest/building/" # API for accessing latest data of a certain building
 
