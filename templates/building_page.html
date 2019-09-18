@@ -7,7 +7,7 @@
 <body>
 
 <ol>
-<!-- For loop logic of jinja template -->
+<!-- For loop for rendering info of each building group -->
 {%for building in buildings%}
 
     <p>{{building['group_name']}} is {{building['percent_full']}}% full</p>
